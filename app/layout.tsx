@@ -1,6 +1,8 @@
-import './globals.css'
 import type { Metadata } from 'next'
 import { Amatic_SC, Josefin_Sans } from 'next/font/google'
+
+import Navbar from '@/components/navigation/navbar/navbar'
+import './globals.css'
 
 export const amatic_SC = Amatic_SC({
 	weight: ['400', '700'],
@@ -21,6 +23,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en'>
+      <Navbar />
 			<body className={josefin_sans.className}>{children}</body>
 		</html>
 	)
