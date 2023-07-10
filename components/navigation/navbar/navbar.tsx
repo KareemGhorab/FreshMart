@@ -5,10 +5,10 @@ import styles from './nav.module.css'
 
 export default function Navbar() {
 	return (
-		<nav className='flex justify-between items-center px-5 bg-red-500 w-[1150px] mx-auto relative mt-24 z-50'>
-			<NavList className={`${styles['nav-section']} bg-yellow-300`} />
+		<nav className='bg-white rounded-lg flex justify-between items-center px-6 py-3 w-[1150px] absolute right-1/2 transform translate-x-1/2 mt-24 z-50'>
+			<NavList className={`${styles['nav-section']}`} />
 			<NavLogo className='absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2' />
-			<NavProfile className={`${styles['nav-section']} bg-blue-300`} />
+			<NavProfile className={`${styles['nav-section']}`} />
 		</nav>
 	)
 }
