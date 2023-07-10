@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input {
+	@apply border-2 border-app-200 px-4 py-2 outline-none;
+}
+
+input::placeholder {
+	@apply text-app-200;
+}
+
+input:focus {
+	@apply border-app-400;
+}
