@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Amatic_SC, Josefin_Sans } from 'next/font/google'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import { config } from '@fortawesome/fontawesome-svg-core'
 
 import Navbar from '@/components/navigation/navbar/navbar'
 import './globals.css'
