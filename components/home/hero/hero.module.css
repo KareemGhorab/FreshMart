@@ -1,0 +1,7 @@
+.carousel-item {
+	@apply flex h-full w-full items-center justify-center relative;
+}
+
+.carousel-image {
+	@apply w-full h-full object-cover absolute inset-0;
+}
