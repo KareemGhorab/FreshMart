@@ -1,17 +1,12 @@
 import type { Metadata } from 'next'
-import { Amatic_SC, Josefin_Sans } from 'next/font/google'
+import { Josefin_Sans } from 'next/font/google'
 import './globals.css'
-
 
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
 import Navbar from '@/components/navigation/navbar/navbar'
 
-export const amatic_SC = Amatic_SC({
-	weight: ['400', '700'],
-	subsets: ['latin'],
-})
 const josefin_sans = Josefin_Sans({ weight: ['400'], subsets: ['latin'] })
 
 export const metadata: Metadata = {
