@@ -1,4 +1,4 @@
-import { TBasicProps } from '@/types'
+import { TBasicProps } from '@/types/basic'
 import Image from 'next/image'
 import Link from 'next/link'
 

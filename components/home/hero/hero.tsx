@@ -1,4 +1,4 @@
-import { TBasicProps } from '@/types'
+import { TBasicProps } from '@/types/basic'
 import HeroCarousel from './hero-carousel'
 
 export default function Hero({}: TBasicProps) {

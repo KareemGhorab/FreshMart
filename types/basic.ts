@@ -1,6 +1,6 @@
 import { ReactElement } from 'react'
 
-export type BasicProps = {
+export type TBasicProps = {
 	className?: string
 	children?: ReactElement
 }

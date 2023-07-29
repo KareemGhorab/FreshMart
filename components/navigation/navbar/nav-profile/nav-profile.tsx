@@ -1,4 +1,4 @@
-import { TBasicProps } from '@/types'
+import { TBasicProps } from '@/types/basic'
 import NavSearch from './nav-search'
 import NavCart from './nav-cart'
 import NavUser from './nav-user'

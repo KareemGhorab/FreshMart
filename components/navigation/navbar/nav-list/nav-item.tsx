@@ -1,4 +1,4 @@
-import { TBasicProps } from '@/types'
+import { TBasicProps } from '@/types/basic'
 import { NavItemType } from '../types'
 import Link from 'next/link'
 

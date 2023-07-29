@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBasketShopping } from '@fortawesome/free-solid-svg-icons'
-import { TBasicProps } from '@/types'
+import { TBasicProps } from '@/types/basic'
 import Badge from '@/components/ui/badge/badge'
 
 type TProps = {
