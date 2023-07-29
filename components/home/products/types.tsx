@@ -1,7 +1,7 @@
 import { ReactElement } from 'react'
 import Image from 'next/image'
 
-import { BasicProps } from '@/types'
+import { TBasicProps } from '@/types'
 import styles from './products.module.css'
 
 export const tabs: ProductsTab[] = [
@@ -70,4 +70,4 @@ export const tabs: ProductsTab[] = [
 export type ProductsTab = {
 	title: string
 	icon: ReactElement
-} & BasicProps
+} & TBasicProps
