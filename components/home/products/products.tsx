@@ -1,8 +1,13 @@
 'use client'
 
+import { Product } from '@/types/product'
 import SectionHeader from '../shared/section-header'
 import ProductsTab from './products-tab'
 import { tabs } from './types'
+
+const dummyProducts: Product[] = [
+	
+]
 
 export default function Arrivals() {
 	
