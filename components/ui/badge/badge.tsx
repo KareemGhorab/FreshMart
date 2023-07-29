@@ -1,4 +1,4 @@
-import { BasicProps } from '@/types'
+import { BasicProps } from '@/types/basic'
 
 export default function Badge({ className = '', children }: BasicProps) {
 	return (
