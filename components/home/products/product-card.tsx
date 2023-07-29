@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import clsx from 'clsx'
 import Image from 'next/image'
 
-type Props = {
+type TProps = {
 	product: Product
 }
 
@@ -23,7 +23,7 @@ const stars: { id: number; isStar: boolean }[] = [
 
 export default function ProductCard({
 	product: { name, price, discount, imageUrl, totalRating },
-}: Props) {
+}: TProps) {
 	return (
 		<article className='flex flex-col items-center justify-center'>
 			<figure>
@@ -51,12 +51,8 @@ export default function ProductCard({
 					))}
 			</div>
 			<div className='flex justify-center items-center'>
-				<div className='text-app-400'>
-					
-				</div>
-				<div className=''>
-
-				</div>
+				<div className='text-app-400'></div>
+				<div className=''></div>
 			</div>
 		</article>
 	)

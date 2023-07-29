@@ -1,8 +1,8 @@
-import { BasicProps } from '@/types'
+import { TBasicProps } from '@/types'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function NavLogo({ className = '' }: BasicProps) {
+export default function NavLogo({ className = '' }: TBasicProps) {
 	return (
 		<figure
 			className={`bg-white rounded-full h-[170px] w-44 flex justify-center items-center ${className}`}

@@ -1,7 +1,7 @@
-import { BasicProps } from '@/types'
+import { TBasicProps } from '@/types'
 import Image from 'next/image'
 
-type Props = {
+type TProps = {
 	title: string
 	onSelect: (title: string) => void
 }
@@ -11,7 +11,7 @@ export default function ProductsTab({
 	children,
 	onSelect,
 	title,
-}: Props & BasicProps) {
+}: TProps & TBasicProps) {
 	return (
 		<button
 			onClick={() => onSelect(title)}
