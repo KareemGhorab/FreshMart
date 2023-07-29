@@ -1,4 +1,4 @@
-import { TBasicProps } from '@/types'
+import { TBasicProps } from '@/types/basic'
 
 export default function Badge({ className = '', children }: TBasicProps) {
 	return (

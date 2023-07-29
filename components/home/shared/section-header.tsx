@@ -1,4 +1,4 @@
-import { TBasicProps } from '@/types'
+import { TBasicProps } from '@/types/basic'
 import { amatic_SC } from '@/components/fonts'
 
 type TProps = {
@@ -9,11 +9,7 @@ type TProps = {
 export default function SectionHeader({
 	paragraph,
 	title,
-<<<<<<< HEAD
 }: TBasicProps & TProps) {
-=======
-}: BasicProps & Props) {
->>>>>>> home-page
 	return (
 		<header className='flex items-center flex-col gap-4 my-24'>
 			<h2 className={`${amatic_SC.className} text-6xl`}>{title}</h2>
