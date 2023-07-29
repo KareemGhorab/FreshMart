@@ -1,7 +1,7 @@
 import { ReactElement } from 'react'
 import Image from 'next/image'
 
-import { BasicProps } from '@/types'
+import { BasicProps } from '@/types/basic'
 import styles from './products.module.css'
 
 export const tabs: ProductsTab[] = [

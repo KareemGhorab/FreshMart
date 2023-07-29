@@ -1,4 +1,4 @@
-import { BasicProps } from '@/types'
+import { BasicProps } from '@/types/basic'
 import { NavItemType } from '../types'
 import Link from 'next/link'
 
