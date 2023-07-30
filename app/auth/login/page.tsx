@@ -37,6 +37,7 @@ const Login = (): JSX.Element => {
 					</p>
 				</div>
 			</form>
+			<div className='my-9'></div>
 		</main>
 	)
 }

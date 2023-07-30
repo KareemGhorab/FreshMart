@@ -7,7 +7,7 @@ const LoginLayout = ({
 }): JSX.Element => {
 	return (
 		<main>
-			<AuthHeader title='Welcome back' />
+			<AuthHeader title='Welcome Back' />
 			{children}
 		</main>
 	)
