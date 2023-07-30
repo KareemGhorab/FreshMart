@@ -1,4 +1,3 @@
-export const IMAGE_BASE: string = '/'
 export const IMAGE_HOME: string = '/home'
 export const IMAGE_ICONS: string = '/icons'
 export const IMAGE_UI: string = '/ui'
