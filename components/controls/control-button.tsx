@@ -4,10 +4,9 @@ import styles from './controls.module.scss'
 
 type TDefault = {
 	variant: 'success' | 'outline' | 'brushed' | 'none'
-	children: React.ReactNode
 	squareSide: boolean
 	className?: string
-}
+} & React.PropsWithChildren
 
 type TButton = {
 	type: 'button'
