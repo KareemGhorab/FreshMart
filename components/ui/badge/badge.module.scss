@@ -1,0 +1,7 @@
+.badge {
+	@apply absolute rounded-full flex justify-center items-center select-none bg-app-400;
+
+	&--cart {
+		@apply w-5 h-5 top-0 left-1/2 transform -translate-y-1/2 -translate-x-1/2 text-white text-sm font-medium;
+	}
+}
