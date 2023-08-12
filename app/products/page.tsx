@@ -1,3 +1,3 @@
-export default function Products() {
-	return <>Products page</>
-}
+const Products: React.FC = (): JSX.Element => <>Products page</>
+
+export default Products

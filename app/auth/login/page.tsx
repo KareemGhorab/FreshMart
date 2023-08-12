@@ -3,7 +3,7 @@ import { amatic_SC } from '@/components/fonts'
 import styles from './login.module.css'
 import Link from 'next/link'
 
-const Login = (): JSX.Element => {
+const Login: React.FC = (): JSX.Element => {
 	const login = async () => {
 		'use server'
 	}
