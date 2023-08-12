@@ -1,3 +1,3 @@
-export default function Contact() {
-	return <>Contact page</>
-}
+const Contact: React.FC = (): JSX.Element => <>Contact page</>
+
+export default Contact

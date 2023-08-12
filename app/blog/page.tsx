@@ -1,3 +1,3 @@
-export default function Blog() {
-	return <>Blog page</>
-}
+const Blog: React.FC = (): JSX.Element => <>Blog page</>
+
+export default Blog

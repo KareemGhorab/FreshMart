@@ -1,10 +1,8 @@
-import AuthHeader from '@/components/auth/auth-header'
+import AuthHeader from '@/components/ui/header/page-header'
 
-const LoginLayout = ({
-	children,
-}: {
-	children: React.ReactNode
-}): JSX.Element => {
+type TProps = React.PropsWithChildren
+
+const LoginLayout: React.FC<TProps> = ({ children }: TProps): JSX.Element => {
 	return (
 		<main>
 			<AuthHeader title='Welcome Back' />
