@@ -1,4 +1,4 @@
-export const navList: NavItemType[] = [
+export const navMenu: TNavItem[] = [
 	{ title: 'Home', href: '/' },
 	{ title: 'Products', href: '/products', subList: [] },
 	{ title: 'Blog', href: '/blog' },
@@ -6,8 +6,8 @@ export const navList: NavItemType[] = [
 	{ title: 'Contact', href: '/contact' },
 ]
 
-export type NavItemType = {
+export type TNavItem = {
 	title: string
 	href: string
-	subList?: NavItemType[]
+	subList?: TNavItem[]
 }
