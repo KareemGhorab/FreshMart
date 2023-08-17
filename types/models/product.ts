@@ -1,3 +1,5 @@
+import { TImage } from '../app/image'
+
 export type Rating = 0 | 1 | 2 | 3 | 4 | 5
 
 export type Product = {
@@ -5,5 +7,5 @@ export type Product = {
 	price: number
 	discount: number
 	totalRating: Rating
-	imageUrl: string
+	image: TImage
 }
