@@ -28,7 +28,7 @@ const Price: React.FC<TProps> = ({
 			className
 		)}
 	>
-		{currency} <span className={clsx('text-lg')}>{price.toFixed(2)}</span>
+		{currency} <span className={clsx('text-xl')}>{price.toFixed(2)}</span>
 	</strong>
 )
 
