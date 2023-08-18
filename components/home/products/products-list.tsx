@@ -1,5 +1,5 @@
-import { Product } from '@/types/product'
-import ProductCard from './product-card'
+import { Product } from '@/types/models/product'
+import ProductCard from '../../ui/card/card'
 
 type TProps = {
 	products: Product[]

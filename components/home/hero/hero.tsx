@@ -1,10 +1,35 @@
-import { TBasicProps } from '@/types/basic'
-import HeroCarousel from './hero-carousel'
+import Carousel from '@/components/carousel/carousel'
+import { TImage } from '@/types/app/image'
 
-export default function Hero({}: TBasicProps) {
+type TProps = {}
+
+const images: TImage[] = [
+	{
+		src: '/home/hero1.jpg',
+		alt: 'Hero One',
+		width: 1920,
+		height: 1080,
+	},
+	{
+		src: '/home/hero2.jpg',
+		alt: 'Hero Two',
+		width: 1920,
+		height: 1080,
+	},
+	{
+		src: '/home/hero3.jpg',
+		alt: 'Hero Three',
+		width: 1920,
+		height: 1080,
+	},
+]
+
+const Hero: React.FC<TProps> = (): JSX.Element => {
 	return (
 		<header>
-			<HeroCarousel />
+			<Carousel images={images} />
 		</header>
 	)
 }
+
+export default Hero
