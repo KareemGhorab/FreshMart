@@ -1,20 +1,14 @@
 'use client'
 
-import { Product } from '@/types/product'
-import SectionHeader from '../shared/section-header'
-import ProductsTab from './products-tab'
+import { Product } from '@/types/models/product'
+import SectionHeader from '../../ui/header/section-header'
+import ProductsTab from '../../ui/tabs/tab'
 import { tabs } from './types'
 
-const dummyProducts: Product[] = [
-	
-]
+const dummyProducts: Product[] = []
 
 export default function Arrivals() {
-	
-
-	const handleSelection = (title: string): void => {
-		
-	}
+	const handleSelection = (title: string): void => {}
 
 	return (
 		<section>

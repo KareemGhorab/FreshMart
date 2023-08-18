@@ -1,7 +1,0 @@
-.btn {
-	@apply py-2 rounded-full w-32 text-lg;
-}
-
-.btn-submit {
-	@apply bg-app-400 text-white;
-}
