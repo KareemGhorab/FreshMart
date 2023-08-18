@@ -1,9 +1,9 @@
 import Carousel from '@/components/carousel/carousel'
-import { TImage } from '@/types/app/image'
+import { ImageProps } from 'next/image'
 
 type TProps = {}
 
-const images: TImage[] = [
+const images: ImageProps[] = [
 	{
 		src: '/home/hero1.jpg',
 		alt: 'Hero One',

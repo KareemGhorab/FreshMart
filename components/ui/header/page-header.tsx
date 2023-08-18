@@ -1,11 +1,9 @@
 import clsx from 'clsx'
-import { IMAGE_UI } from '@/config/config'
-import Image from 'next/image'
-import { TImage } from '@/types/app/image'
+import Image, { ImageProps } from 'next/image'
 
 type TProps = {
 	title: string
-	bgImage?: TImage
+	bgImage?: ImageProps
 	className?: string
 }
 
