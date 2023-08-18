@@ -2,12 +2,12 @@ import Image from 'next/image'
 import clsx from 'clsx'
 import Rating from '@/components/ui/rating/rating'
 import Price from '@/components/ui/price/price'
-import { Product } from '@/types/models/product'
+import { TProduct } from '@/types/models/product'
 
 import styles from './card.module.scss'
 
 type TProps = {
-	product: Product
+	product: TProduct
 	className?: string
 }
 
