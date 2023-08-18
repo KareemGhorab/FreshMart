@@ -1,0 +1,11 @@
+.price {
+	@apply relative;
+
+	&--normal {
+		@apply text-app-400;
+	}
+
+	&--deleted {
+		@apply text-gray-400 after:w-full after:h-[1px] after:bg-gray-400 after:absolute after:top-1/2 after:left-0;
+	}
+}
