@@ -4,7 +4,7 @@ import styles from './controls.module.scss'
 
 type TDefault = {
 	variant: 'success' | 'outline' | 'brushed' | 'none'
-	squareSide: boolean
+	squareSide?: boolean
 	className?: string
 } & React.PropsWithChildren
 
@@ -20,7 +20,7 @@ type TSubmit = {
 type TProps = TDefault & (TButton | TSubmit)
 
 const ControlButton: React.FC<TProps> = (props: TProps): JSX.Element => {
-	const { variant, type, children, squareSide, className = '' } = props
+	const { variant, type, children, squareSide = false, className = '' } = props
 
 	const isSuccess = variant === 'success'
 	const isOutline = variant === 'outline'
