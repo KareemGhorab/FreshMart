@@ -1,11 +1,11 @@
 import { TImage } from '../app/image'
 
-export type Rating = 0 | 1 | 2 | 3 | 4 | 5
+export type TRating = 0 | 1 | 2 | 3 | 4 | 5
 
-export type Product = {
+export type TProduct = {
 	name: string
 	price: number
 	discount: number
-	totalRating: Rating
+	totalRating: TRating
 	image: TImage
 }
