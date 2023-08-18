@@ -2,6 +2,7 @@ import clsx from 'clsx'
 import { TRating } from '@/types/models/product'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { SizeProp } from '@fortawesome/fontawesome-svg-core'
 
 const stars: { id: number; isStar: boolean }[] = [
 	{ id: 0, isStar: true },
@@ -18,6 +19,7 @@ const stars: { id: number; isStar: boolean }[] = [
 
 type TProps = {
 	rating: TRating
+	starSize?: SizeProp
 	starColor?: string
 	className?: string
 }
@@ -26,15 +28,17 @@ const Rating: React.FC<TProps> = ({
 	rating,
 	starColor = 'text-yellow-400',
 	className = '',
+	starSize = 'sm',
 }: TProps): JSX.Element => {
 	return (
 		<div className={clsx(className)}>
 			{stars.slice(5 - rating, 10 - rating).map(({ isStar, id }) => (
 				<FontAwesomeIcon
 					icon={faStar}
+					size={starSize}
 					key={id}
 					className={clsx({
-						starColor: isStar,
+						[starColor]: isStar,
 						'text-gray-400': !isStar,
 					})}
 				/>
