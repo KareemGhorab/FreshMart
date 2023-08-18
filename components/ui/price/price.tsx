@@ -1,18 +1,18 @@
-import { BasicProps } from '@/types/basic'
 import clsx from 'clsx'
 
-type Props = {
+type TProps = {
 	price: number
 	discount: number
+	className?: string
 }
 
-const Price = ({
+const Price: React.FC<TProps> = ({
 	price,
 	discount,
-	className,
-}: Props & BasicProps): JSX.Element => {
+	className = '',
+}: TProps): JSX.Element => {
 	return (
-		<div className={clsx(className, 'flex gap-3 justify-center')}>
+		<div className={clsx('flex gap-3 justify-center', className)}>
 			<div className='text-app-400'>${(price - discount).toFixed(2)}</div>
 			{discount && (
 				<del className='block text-gray-400 line-through'>

@@ -1,6 +1,5 @@
 import clsx from 'clsx'
-import { BasicProps } from '@/types/basic'
-import { Rating } from '@/types/product'
+import { Rating } from '@/types/models/product'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -17,14 +16,17 @@ const stars: { id: number; isStar: boolean }[] = [
 	{ id: 9, isStar: false },
 ]
 
-type Props = {
+type TProps = {
 	rating: Rating
+	starColor?: string
+	className?: string
 }
 
-const Rating = ({
+const Rating: React.FC<TProps> = ({
 	rating,
+	starColor = 'text-yellow-400',
 	className = '',
-}: Props & BasicProps): JSX.Element => {
+}: TProps): JSX.Element => {
 	return (
 		<div className={clsx(className)}>
 			{stars.slice(5 - rating, 10 - rating).map(({ isStar, id }) => (
@@ -32,7 +34,7 @@ const Rating = ({
 					icon={faStar}
 					key={id}
 					className={clsx({
-						'text-yellow-400': isStar,
+						starColor: isStar,
 						'text-gray-400': !isStar,
 					})}
 				/>
