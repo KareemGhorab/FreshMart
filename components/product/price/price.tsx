@@ -1,8 +1,12 @@
 import clsx from 'clsx'
+import { TCurrency } from '@/types/app/locale/locale'
+import { playfair_display } from '@/components/fonts'
+
+import styles from './price.module.scss'
 
 type TProps = {
 	price: number
-	
+	currency: TCurrency
 	deleted?: boolean
 	className?: string
 }
@@ -11,15 +15,21 @@ const Price: React.FC<TProps> = ({
 	price,
 	className = '',
 	deleted = false,
+	currency,
 }: TProps): JSX.Element => (
-	<div
-		className={clsx({
-			'text-app-400': !deleted,
-			'text-gray-400 line-through': deleted,
-		})}
+	<strong
+		className={clsx(
+			styles.price,
+			playfair_display.className,
+			{
+				[styles['price--normal']]: !deleted,
+				[styles['price--deleted']]: deleted,
+			},
+			className
+		)}
 	>
-		${price.toFixed(2)}
-	</div>
+		{currency} <span className={clsx('text-lg')}>{price.toFixed(2)}</span>
+	</strong>
 )
 
 export default Price
