@@ -22,18 +22,7 @@ const Card = ({
 	className = '',
 }: TProps) => (
 	<article className={clsx(styles.card, className)}>
-		<figure>
-			<Image
-				src={src}
-				alt={alt}
-				width={width}
-				height={height}
-				className='w-full h-full'
-			/>
-		</figure>
-		<figcaption>{name}</figcaption>
-		<Rating rating={totalRating} />
-		<Price price={price} discount={discount} />
+		
 	</article>
 )
 
