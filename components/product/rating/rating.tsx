@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { Rating } from '@/types/models/product'
+import { TRating } from '@/types/models/product'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -17,7 +17,7 @@ const stars: { id: number; isStar: boolean }[] = [
 ]
 
 type TProps = {
-	rating: Rating
+	rating: TRating
 	starColor?: string
 	className?: string
 }
