@@ -1,10 +1,10 @@
 import { TProduct } from '@/types/models/product'
 import Image from 'next/image'
 import clsx from 'clsx'
-import Rating from './rating/rating'
+import Rating from '../rating/rating'
 
-import styles from './productItem.module.scss'
-import Price from './price/price'
+import styles from './product-item.module.scss'
+import Price from '../price/price'
 
 type TProps = { className?: string } & TProduct
 
