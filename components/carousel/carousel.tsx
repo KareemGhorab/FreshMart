@@ -9,10 +9,10 @@ import 'swiper/css/effect-fade'
 import 'swiper/css/pagination'
 
 import styles from './carousel.module.scss'
-import { TImage } from '@/types/app/image'
+import { ImageProps } from 'next/image'
 
 type TProps = {
-	images: TImage[]
+	images: ImageProps[]
 	className?: string
 	delay?: number
 	disableOnInteraction?: boolean
@@ -48,7 +48,7 @@ const Carousel: React.FC<TProps> = ({
 			modules={[Autoplay, Pagination, EffectFade]}
 		>
 			{images.map(({ src, alt, width, height }) => (
-				<SwiperSlide key={src}>
+				<SwiperSlide key={alt}>
 					<div className={styles['carousel__item']}>
 						<Image
 							className={styles['carousel__image']}
