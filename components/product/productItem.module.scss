@@ -1,0 +1,7 @@
+.product_item {
+	@apply hover:shadow-2xl hover:cursor-pointer hover:text-app-400 transition-shadow duration-200 flex flex-col justify-center items-center text-center gap-2 p-3;
+
+	&__footer {
+		@apply flex gap-4;
+	}
+}
