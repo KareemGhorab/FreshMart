@@ -1,0 +1,9 @@
+.shiny {
+	@apply relative overflow-hidden 
+			after:content-[''] hover:after:top-[135%] hover:after:-right-[80%];
+
+	&:after {
+		@apply bg-white h-4/5 w-[150%] bg-opacity-10 absolute transition-all duration-200 ease-linear
+				-top-[75%] right-[32%] -translate-y-1/2 -skew-y-[50deg];
+	}
+}
