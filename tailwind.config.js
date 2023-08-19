@@ -7,6 +7,9 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			spacing: {
+				navbar: '300px',
+			},
 			colors: {
 				app: {
 					200: '#d3d0c2',

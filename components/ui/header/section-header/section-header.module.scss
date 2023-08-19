@@ -3,5 +3,13 @@
 
 	&__heading {
 		@apply font-semibold text-6xl;
+
+		&--primary {
+			@apply text-app-400;
+		}
+	}
+
+	&__paragraph {
+		@apply text-lg font-semibold text-gray-500 text-center;
 	}
 }

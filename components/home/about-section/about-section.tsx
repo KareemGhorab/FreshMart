@@ -12,7 +12,7 @@ const infoItems: { title: string; paragraph: string }[] = [
 			'At FreshMart, we take pride in offering you products that are 100% natural. From farm-fresh fruits and vegetables to organic meats and dairy.',
 	},
 	{
-		title: 'Always Fresh',
+		title: 'Fresh Products',
 		paragraph:
 			'With FreshMart, freshness is our promise to you. We diligently work with local farmers, and suppliers to bring you the freshest products.',
 	},
