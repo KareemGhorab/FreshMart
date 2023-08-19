@@ -7,7 +7,10 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 
 import Navbar from '@/components/navigation/navbar/navbar'
 
-const josefin_sans = Josefin_Sans({ weight: ['400'], subsets: ['latin'] })
+const josefin_sans = Josefin_Sans({
+	weight: ['400', '500', '600', '700'],
+	subsets: ['latin'],
+})
 
 export const metadata: Metadata = {
 	title: 'FreshMart - Organic and Fresh Food',
