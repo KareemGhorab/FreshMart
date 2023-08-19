@@ -1,11 +1,11 @@
 'use client'
 
-import { Product } from '@/types/models/product'
-import SectionHeader from '../../ui/header/section-header'
+import { TProduct } from '@/types/models/product'
+import SectionHeader from '../../ui/header/section-header/section-header'
 import ProductsTab from '../../ui/tabs/tab'
 import { tabs } from './types'
 
-const dummyProducts: Product[] = []
+const dummyProducts: TProduct[] = []
 
 export default function Arrivals() {
 	const handleSelection = (title: string): void => {}
@@ -19,6 +19,7 @@ export default function Arrivals() {
 			<nav className='flex justify-evenly'>
 				{tabs.map((tab) => (
 					<ProductsTab
+						variant='painted'
 						onSelect={handleSelection}
 						title={tab.title}
 						key={tab.title}
