@@ -1,4 +1,4 @@
-import AuthHeader from '@/components/ui/header/page-header'
+import AuthHeader from '@/components/ui/header/page-header/page-header'
 
 type TProps = React.PropsWithChildren
 
