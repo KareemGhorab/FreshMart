@@ -1,0 +1,7 @@
+.not_found {
+	@apply flex justify-center items-center select-none;
+
+	&__left {
+		@apply flex flex-col gap-6 justify-center items-center;
+	}
+}
