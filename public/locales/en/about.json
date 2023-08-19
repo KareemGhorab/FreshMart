@@ -1,0 +1,14 @@
+{
+	"title": {
+		"fresh": "Fresh Products",
+		"healthy": "Super Healthy",
+		"natural": "100% Natural",
+		"quality": "Premium Quality"
+	},
+	"paragraph": {
+		"fresh": "With FreshMart, freshness is our promise to you. We diligently work with local farmers, and suppliers to bring you the freshest products.",
+		"healthy": "Discover a world of super healthy options at FreshMart. Our extensive selection of organic, gluten-free, and plant-based products caters to all dietary needs and preferences.",
+		"natural": "At FreshMart, we take pride in offering you products that are 100% natural. From farm-fresh fruits and vegetables to organic meats and dairy.",
+		"quality": "Welcome to FreshMart, your go-to destination for premium quality products. We source the finest ingredients, carefully selecting each item to meet our exceptional standards."
+	}
+}
