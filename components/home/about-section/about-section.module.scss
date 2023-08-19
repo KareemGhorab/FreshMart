@@ -1,0 +1,33 @@
+.about_section {
+	@apply bg-app-400 text-white w-full flex justify-center items-center flex-col pb-72 relative;
+
+	&__info {
+		@apply grid grid-cols-2 gap-10 relative pt-5
+		after:w-full after:border-dashed after:border-t after:bg-white after:absolute after:top-1/2 after:-translate-y-1/2
+		before:h-full before:border-dashed before:border-r before:bg-white before:absolute before:right-1/2;
+
+		&__item {
+			@apply w-96;
+
+			&--right {
+				@apply text-right;
+			}
+
+			&--left {
+				@apply text-left;
+			}
+
+			&__heading {
+				@apply text-xl font-medium;
+			}
+
+			&__paragraph {
+				@apply text-base leading-5;
+			}
+		}
+	}
+
+	&__footer {
+		@apply absolute bottom-0 translate-y-1/4;
+	}
+}
