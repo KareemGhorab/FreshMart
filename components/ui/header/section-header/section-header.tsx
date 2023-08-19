@@ -14,8 +14,15 @@ const SectionHeader: React.FC<TProps> = ({
 	paragraph,
 	className = '',
 }: TProps) => (
-	<header className={clsx(styles['section-header'], className)}>
-		<h2 className={`${amatic_SC.className} text-6xl`}>{title}</h2>
+	<header className={clsx(styles['section_header'], className)}>
+		<h2
+			className={clsx(
+				amatic_SC.className,
+				styles['section_header__heading']
+			)}
+		>
+			{title}
+		</h2>
 		{paragraph && <p>{paragraph}</p>}
 	</header>
 )

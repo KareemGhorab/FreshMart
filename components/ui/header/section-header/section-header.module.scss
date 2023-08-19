@@ -1,3 +1,7 @@
 .section_header {
 	@apply flex items-center flex-col gap-4 my-24;
+
+	&__heading {
+		@apply font-semibold text-6xl;
+	}
 }
