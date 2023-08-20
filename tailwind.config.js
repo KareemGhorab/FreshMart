@@ -9,6 +9,7 @@ module.exports = {
 		extend: {
 			spacing: {
 				navbar: '300px',
+				container: '1300px',
 			},
 			colors: {
 				app: {
