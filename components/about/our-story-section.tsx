@@ -51,7 +51,7 @@ type TProps = {
 const OurStorySection: React.FC<TProps> = ({
 	className = '',
 }: TProps): JSX.Element => (
-	<section className='max-w-[1300px] px-8'>
+	<section className='w-container px-8'>
 		<SectionHeader
 			variant='primary'
 			title='Welcome to FreshMart'
