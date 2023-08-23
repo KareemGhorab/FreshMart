@@ -9,7 +9,13 @@ module.exports = {
 		extend: {
 			spacing: {
 				navbar: '300px',
+			},
+			height: {
+				footer: '480px',
+			},
+			maxWidth: {
 				container: '1300px',
+				footer: '1100px',
 			},
 			colors: {
 				app: {
