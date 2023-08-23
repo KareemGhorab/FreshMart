@@ -1,0 +1,47 @@
+.footer {
+	@apply grid grid-cols-3 grid-rows-2 h-footer max-w-footer gap-7;
+
+	h4 {
+		@apply text-lg font-semibold mb-3;
+	}
+
+	&__badge {
+		@apply bg-app-600 px-5 col-start-1 col-span-1 row-span-full flex flex-col justify-center items-center gap-5 text-center text-white;
+	}
+
+	&__contact {
+		@apply flex flex-col col-start-3 col-span-1 row-start-2 row-span-1;
+
+		ul {
+			@apply flex flex-col gap-3;
+
+			li {
+				@apply flex items-center gap-2;
+
+				i {
+					@apply text-white w-7 h-7 bg-app-400 rounded-full flex justify-center items-center;
+				}
+			}
+		}
+	}
+
+	&__newsletter {
+		@apply col-start-2 col-span-1 row-start-2 row-span-1;
+	}
+
+	nav {
+		@apply col-start-2 col-span-2 row-start-1 row-span-1 flex justify-between;
+
+		section {
+			@apply flex flex-col;
+
+			ul {
+				@apply flex flex-col gap-2;
+
+				li {
+					@apply hover:text-app-400;
+				}
+			}
+		}
+	}
+}
