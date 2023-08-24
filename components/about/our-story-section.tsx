@@ -61,8 +61,8 @@ const OurStorySection: React.FC<TProps> = ({
 			{storyItems.map((item) => (
 				<StoryItem key={item.title} {...item} />
 			))}
-			<div className='col-start-2 col-span-1 row-start-1 row-span-3'>
-				<ShinyContainer className='bg-app-600 text-center flex flex-col gap-4 text-white px-5 pt-20 pb-32 relative'>
+			<div className='col-start-2 col-span-1 row-start-1 row-span-3 relative'>
+				<ShinyContainer className='bg-app-600 text-center flex flex-col gap-4 text-white px-5 pt-20 pb-32'>
 					<h3 className='font-semibold text-xl'>Our Story</h3>
 					<p>
 						Our story at FreshMart began with a vision to provide
@@ -80,14 +80,14 @@ const OurStorySection: React.FC<TProps> = ({
 						everyone deserves access to nutritious food.
 					</p>
 					<div className='w-0 h-0 border-b-[50px] border-x-[200px] border-x-transparent border-b-white absolute bottom-0 left-1/2 -translate-x-1/2' />
-					<Image
-						className='absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/3'
-						src='/ui/lemons.png'
-						alt='lemons'
-						width={250}
-						height={213}
-					/>
 				</ShinyContainer>
+				<Image
+					className='absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/3'
+					src='/ui/lemons.png'
+					alt='lemons'
+					width={250}
+					height={213}
+				/>
 			</div>
 		</div>
 	</section>
