@@ -1,7 +1,7 @@
-import OurStorySection from '@/components/about/our-story-section'
 import PageHeader from '@/components/ui/header/page-header/page-header'
+import OurStorySection from './components/our-story-section'
 
-const About: React.FC<{}> = (): JSX.Element => {
+const About: React.FC = (): JSX.Element => {
 	return (
 		<main className='flex flex-col justify-center items-center'>
 			<PageHeader

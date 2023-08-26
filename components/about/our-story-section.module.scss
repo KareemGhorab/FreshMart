@@ -1,7 +1,0 @@
-.story_item {
-	@apply flex flex-col justify-center items-center gap-3 text-center;
-
-	&__header {
-		@apply text-xl text-app-600 font-semibold;
-	}
-}
