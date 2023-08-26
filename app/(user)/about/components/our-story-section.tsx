@@ -4,10 +4,10 @@ import {
 	faLeaf,
 	faSeedling,
 } from '@fortawesome/free-solid-svg-icons'
-import SectionHeader from '../../../components/ui/header/section-header/section-header'
 import StoryItem, { TStoryItem } from './story-item'
-import ShinyContainer from '../../../components/ui/shiny-container/shiny-container'
 import Image from 'next/image'
+import SectionHeader from '@/components/ui/header/section-header/section-header'
+import ShinyContainer from '@/components/ui/shiny-container/shiny-container'
 
 const storyItems: TStoryItem[] = [
 	{
