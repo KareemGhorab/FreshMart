@@ -35,16 +35,17 @@ model Session {
 }
 
 model User {
-  id            String    @id @default(cuid())
-  name          String?
-  email         String?   @unique
-  emailVerified DateTime? @map("email_verified")
-  role          Role
-  accounts      Account[]
-  sessions      Session[]
-  cartId        Int?      @map("cart_id")
-  Review        Review[]
-  Cart          Cart[]
+  id             String    @id @default(cuid())
+  name           String
+  email          String    @unique
+  emailVerified  DateTime? @map("email_verified")
+  hashedPassword String
+  role           Role
+  accounts       Account[]
+  sessions       Session[]
+  cartId         Int?      @map("cart_id")
+  Review         Review[]
+  Cart           Cart[]
 }
 
 model VerificationToken {
