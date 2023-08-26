@@ -4,9 +4,9 @@ import {
 	faLeaf,
 	faSeedling,
 } from '@fortawesome/free-solid-svg-icons'
-import SectionHeader from '../ui/header/section-header/section-header'
+import SectionHeader from '../../../components/ui/header/section-header/section-header'
 import StoryItem, { TStoryItem } from './story-item'
-import ShinyContainer from '../ui/shiny-container/shiny-container'
+import ShinyContainer from '../../../components/ui/shiny-container/shiny-container'
 import Image from 'next/image'
 
 const storyItems: TStoryItem[] = [
@@ -44,13 +44,7 @@ const storyItems: TStoryItem[] = [
 	},
 ]
 
-type TProps = {
-	className?: string
-}
-
-const OurStorySection: React.FC<TProps> = ({
-	className = '',
-}: TProps): JSX.Element => (
+const OurStorySection: React.FC = (): JSX.Element => (
 	<section className='max-w-container px-8'>
 		<SectionHeader
 			variant='primary'
@@ -62,7 +56,7 @@ const OurStorySection: React.FC<TProps> = ({
 				<StoryItem key={item.title} {...item} />
 			))}
 			<div className='col-start-2 col-span-1 row-start-1 row-span-3 relative'>
-				<ShinyContainer className='bg-app-600 text-center flex flex-col gap-4 text-white px-5 pt-20 pb-32'>
+				<ShinyContainer className='bg-app-400 text-center flex flex-col gap-4 text-white px-5 pt-20 pb-32'>
 					<h3 className='font-semibold text-xl'>Our Story</h3>
 					<p>
 						Our story at FreshMart began with a vision to provide
