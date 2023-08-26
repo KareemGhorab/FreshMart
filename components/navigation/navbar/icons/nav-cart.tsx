@@ -2,8 +2,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBasketShopping } from '@fortawesome/free-solid-svg-icons'
 import Badge from '@/components/ui/badge/badge'
 
-import styles from '../nav.module.scss'
-
 type TProps = {
 	itemsCount?: number
 }
@@ -17,7 +15,7 @@ const NavCart: React.FC<TProps> = ({ itemsCount = 0 }: TProps): JSX.Element => (
 			<span>{itemsCount}</span>
 		</Badge>
 		<FontAwesomeIcon
-			className={styles['navbar__profile__icon']}
+			className='text-app-400 w-8 h-8'
 			icon={faBasketShopping}
 		/>
 	</button>

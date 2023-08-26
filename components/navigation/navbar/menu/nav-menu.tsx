@@ -2,10 +2,8 @@ import clsx from 'clsx'
 import { navMenu } from '../types'
 import NavItem from './nav-item'
 
-import styles from '../nav.module.scss'
-
 const NavMenu: React.FC = (): JSX.Element => (
-	<ul className={clsx(styles['navbar__menu'], styles['navbar__section'])}>
+	<ul className={clsx('flex justify-evenly items-center', 'w-[420px] h-20')}>
 		{navMenu.map((item) => (
 			<NavItem {...item} key={item.title} />
 		))}

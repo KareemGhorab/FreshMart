@@ -1,7 +1,3 @@
-import clsx from 'clsx'
-
-import styles from './categories-section.module.scss'
-import Image from 'next/image'
 import CategoryItem, { TCategoryItem } from './category-item'
 
 // TODO: Links
@@ -73,14 +69,12 @@ const categoryItems: TCategoryItem[] = [
 	},
 ]
 
-type TProps = {
-	className?: string
-}
-
-const CategoriesSection: React.FC<TProps> = ({
-	className = '',
-}: TProps): JSX.Element => (
-	<section className={clsx(styles['categories_section'], className)}>
+const CategoriesSection: React.FC = (): JSX.Element => (
+	<section
+		className={
+			'grid grid-cols-4 grid-rows-2 text-white max-w-container mx-auto'
+		}
+	>
 		{categoryItems.map((item) => (
 			<CategoryItem {...item} key={item.title} />
 		))}
