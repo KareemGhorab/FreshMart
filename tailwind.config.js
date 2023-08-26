@@ -9,6 +9,7 @@ module.exports = {
 		extend: {
 			spacing: {
 				navbar: '300px',
+				form: '700px',
 			},
 			height: {
 				footer: '480px',
