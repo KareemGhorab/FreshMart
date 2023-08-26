@@ -1,14 +1,13 @@
-import { getServerSession } from 'next-auth'
-import { authOptions } from '@/app/api/auth/[...nextauth]/options'
+import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
 
 //TODO user profile redirection
 
 const NavUser: React.FC = () => (
-	<button>
+	<Link href='/auth/login'>
 		<FontAwesomeIcon icon={faUserCircle} className='text-app-400 w-8 h-8' />
-	</button>
+	</Link>
 )
 
 export default NavUser

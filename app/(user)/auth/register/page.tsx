@@ -31,7 +31,7 @@ const Register: React.FC = (): JSX.Element => {
 			handleRegister(values)
 				.then(() => router.replace('/auth/login?success=true'))
 				.catch((err) => {
-					logger.error(err)
+					// logger.error(err)
 					runToast(err.response.data.message, 'error')
 				})
 		},
