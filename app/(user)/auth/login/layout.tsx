@@ -1,4 +1,4 @@
-import AuthHeader, { AuthVariant } from '@/app/auth/components/auth-header'
+import AuthHeader, { AuthVariant } from '../components/auth-header'
 
 type TProps = React.PropsWithChildren
 
