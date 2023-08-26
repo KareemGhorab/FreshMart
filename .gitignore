@@ -36,3 +36,11 @@ next-env.d.ts
 
 # db
 *.sql
+
+# debug
+launch.json
+
+# logs
+*.log
+/logs
+/log
