@@ -1,16 +1,14 @@
 import clsx from 'clsx'
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-import styles from './our-story-section.module.scss'
+import { TPropsWithClassName } from '@/types/app/props/props'
 
 export type TStoryItem = {
 	icon: IconDefinition
 	iconClassName: string
 	title: string
 	paragraph: string
-	className: string
-}
+} & TPropsWithClassName
 
 type TProps = TStoryItem
 
@@ -21,9 +19,14 @@ const StoryItem: React.FC<TProps> = ({
 	title,
 	paragraph,
 }: TProps): JSX.Element => (
-	<article className={clsx(styles['story_item'], className)}>
+	<article
+		className={clsx(
+			'flex flex-col justify-center items-center gap-3 text-center',
+			className
+		)}
+	>
 		<FontAwesomeIcon icon={icon} className={iconClassName} size='2xl' />
-		<h3 className={styles['story_item__header']}>{title}</h3>
+		<h3 className={'text-xl text-app-600 font-semibold'}>{title}</h3>
 		<p>{paragraph}</p>
 	</article>
 )
