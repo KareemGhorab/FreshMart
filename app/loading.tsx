@@ -2,7 +2,7 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Loading: React.FC = (): JSX.Element => (
-	<main className='flex justify-center items-center h-screen'>
+	<main className='flex justify-center items-center h-screen text-app-400'>
 		<FontAwesomeIcon icon={faSpinner} size='5x' />
 	</main>
 )
