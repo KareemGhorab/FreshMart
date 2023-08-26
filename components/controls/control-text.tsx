@@ -11,6 +11,8 @@ type TDefault = {
 	onChange?: React.ChangeEventHandler<HTMLInputElement>
 	onBlur?: React.FocusEventHandler<HTMLInputElement>
 	className?: string
+	name: string
+	id: string
 }
 
 type TNone = {
@@ -36,6 +38,8 @@ const ControlText: React.FC<TProps> = (props: TProps): JSX.Element => {
 		onBlur,
 		variant = 'none',
 		className = '',
+		name,
+		id,
 	} = props
 
 	const isSearch = variant === 'search'
@@ -60,6 +64,8 @@ const ControlText: React.FC<TProps> = (props: TProps): JSX.Element => {
 					},
 					className
 				)}
+				name={name}
+				id={id}
 			/>
 			{isSearch && (
 				<FontAwesomeIcon
