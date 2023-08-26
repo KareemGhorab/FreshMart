@@ -8,13 +8,14 @@ import styles from './footer.module.scss'
 
 const Footer: React.FC = (): JSX.Element => (
 	<>
-		<div className='my-80' />
+		<div className='my-52' />
 		<footer className={clsx(styles.footer, 'mx-auto')}>
 			<FooterBadge />
 			<FooterNav />
 			<FooterNewsletter />
 			<FooterContact />
 		</footer>
+		<div className='my-4'></div>
 	</>
 )
 

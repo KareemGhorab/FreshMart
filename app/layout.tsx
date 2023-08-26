@@ -6,9 +6,6 @@ import './globals.css'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import 'react-toastify/dist/ReactToastify.css'
 
-import Navbar from '@/components/navigation/navbar/navbar'
-import Footer from '@/components/navigation/footer/footer'
-
 const josefin_sans = Josefin_Sans({
 	weight: ['400', '500', '600', '700'],
 	subsets: ['latin'],
@@ -25,11 +22,7 @@ type TProps = React.PropsWithChildren
 const RootLayout: React.FC<TProps> = async ({ children }: TProps) => {
 	return (
 		<html lang='en'>
-			<body className={josefin_sans.className}>
-				<Navbar />
-				{children}
-				<Footer />
-			</body>
+			<body className={josefin_sans.className}>{children}</body>
 		</html>
 	)
 }
