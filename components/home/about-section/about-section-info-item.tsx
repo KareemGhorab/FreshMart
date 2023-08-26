@@ -1,7 +1,5 @@
 import clsx from 'clsx'
 
-import styles from './about-section.module.scss'
-
 type TProps = {
 	title: string
 	paragraph: string
@@ -17,22 +15,16 @@ const AboutSectionInfoItem: React.FC<TProps> = ({
 }: TProps): JSX.Element => (
 	<div
 		className={clsx(
-			styles['about_section__info__item'],
+			'w-96',
 			{
-				[styles['about_section__info__item--right']]:
-					orientation === 'right',
-				[styles['about_section__info__item--left']]:
-					orientation === 'left',
+				'text-right': orientation === 'right',
+				'text-left': orientation === 'left',
 			},
 			className
 		)}
 	>
-		<h3 className={clsx(styles['about_section__info__item__heading'])}>
-			{title}
-		</h3>
-		<p className={clsx(styles['about_section__info__item__paragraph'])}>
-			{paragraph}
-		</p>
+		<h3 className={clsx('text-xl font-medium')}>{title}</h3>
+		<p className={clsx('text-base leading-5')}>{paragraph}</p>
 	</div>
 )
 

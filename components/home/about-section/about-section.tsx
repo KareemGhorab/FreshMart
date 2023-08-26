@@ -1,9 +1,7 @@
 import clsx from 'clsx'
-import SectionHeader from '@/components/ui/header/section-header/section-header'
-
-import styles from './about-section.module.scss'
-import AboutSectionInfoItem from './about-section-info-item'
 import Image from 'next/image'
+import SectionHeader from '@/components/ui/header/section-header/section-header'
+import AboutSectionInfoItem from './about-section-info-item'
 
 const infoItems: { title: string; paragraph: string }[] = [
 	{
@@ -35,9 +33,18 @@ type TProps = {
 const AboutSection: React.FC<TProps> = ({
 	className = '',
 }: TProps): JSX.Element => (
-	<section className={clsx(styles['about_section'], className)}>
+	<section
+		className={clsx(
+			'bg-app-400 text-white w-full flex justify-center items-center flex-col pb-72 relative',
+			className
+		)}
+	>
 		<SectionHeader title='Why Choose Us' />
-		<div className={clsx(styles['about_section__info'])}>
+		<div
+			className={clsx(`grid grid-cols-2 gap-10 relative pt-5
+								after:w-full after:border-dashed after:border-t after:bg-white after:absolute after:top-1/2 after:-translate-y-1/2
+								before:h-full before:border-dashed before:border-r before:bg-white before:absolute before:right-1/2`)}
+		>
 			{infoItems.map((item, idx) => (
 				<AboutSectionInfoItem
 					key={item.title}
@@ -47,7 +54,7 @@ const AboutSection: React.FC<TProps> = ({
 			))}
 		</div>
 		<Image
-			className={clsx(styles['about_section__footer'])}
+			className={clsx('absolute bottom-0 translate-y-1/4')}
 			src='/home/about.png'
 			alt='Vegetables bag'
 			width={524}
