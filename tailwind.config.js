@@ -10,6 +10,7 @@ module.exports = {
 			spacing: {
 				navbar: '300px',
 				form: '700px',
+				sidebar: '400px',
 			},
 			height: {
 				footer: '480px',
