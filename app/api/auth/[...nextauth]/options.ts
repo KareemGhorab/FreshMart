@@ -6,7 +6,6 @@ import GoogleProvider from 'next-auth/providers/google'
 
 import { prisma } from '@/prisma/db'
 import { PrismaAdapter } from '@next-auth/prisma-adapter'
-import { HttpError } from '@/app/api/utils/error-handling/app-error'
 
 export const authOptions: NextAuthOptions = {
 	providers: [
@@ -39,11 +38,7 @@ export const authOptions: NextAuthOptions = {
 				})
 
 				if (!user || !user.hashedPassword)
-					throw new HttpError(
-						'Login error',
-						"This email isn't registered",
-						404
-					)
+					throw new Error("This email isn't registered")
 
 				// Check password match
 				const passwordMatch = bcrypt.compareSync(
@@ -51,12 +46,7 @@ export const authOptions: NextAuthOptions = {
 					user.hashedPassword
 				)
 
-				if (!passwordMatch)
-					throw new HttpError(
-						'Login error',
-						'Incorrect password',
-						400
-					)
+				if (!passwordMatch) throw new Error('Incorrect password')
 
 				return user
 			},
