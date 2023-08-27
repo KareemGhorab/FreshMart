@@ -17,7 +17,13 @@ export const POST = (req: NextRequest) =>
 			password: string().matches(passwordRegex, passwordError).required(),
 		})
 
-		const { email, name, password } = await schema.validate(body)
+		const {
+			email: caseSensitiveEmail,
+			name,
+			password,
+		} = await schema.validate(body)
+
+		const email = caseSensitiveEmail.toLowerCase()
 
 		// Email Conflict Check
 		const userExist = await prisma.user.findUnique({

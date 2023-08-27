@@ -1,5 +1,6 @@
 import { object, string } from 'yup'
 import { signIn } from 'next-auth/react'
+import { runToast } from '@/utils/toast/toast'
 
 export type TLoginForm = {
 	email: string
@@ -16,11 +17,12 @@ export const loginInitialValues: TLoginForm = {
 	password: '',
 }
 
-export const handleLogin = (formValues: TLoginForm) => {
-	signIn('credentials', {
+export const handleLogin = async (formValues: TLoginForm) => {
+	const user = await signIn('credentials', {
 		...formValues,
 		redirect: false,
 	})
-		.then((user) => console.log({ user }))
-		.catch((err) => console.log({ err }))
+	if (user?.error) {
+		throw new Error(user.error)
+	}
 }

@@ -4,20 +4,23 @@ import { useEffect } from 'react'
 import { useFormik, FormikProps } from 'formik'
 import { useRouter, useSearchParams } from 'next/navigation'
 
-import ControlButton from '@/components/controls/control-button'
 import { Toast, runToast } from '@/utils/toast/toast'
-
 import {
 	TLoginForm,
 	handleLogin,
 	loginInitialValues,
 	loginValidationSchema,
 } from './form'
-import AuthTextControl from '../components/auth-text-control'
-import AuthFromHeader from '../components/auth-form-header'
-import AuthFormFooter from '../components/auth-form-footer'
+import AuthTextControl, {
+	TAuthTextControlProps,
+} from '../components/auth-text-control'
+import AuthFromHeader from '../components/auth-header/auth-form-header'
+import { TAuthVariant } from '../types/auth-variant'
+import AuthFooter from '../components/auth-footer/auth-footer'
 
-const Register: React.FC = (): JSX.Element => {
+const variant: TAuthVariant = 'login'
+
+const Login: React.FC = (): JSX.Element => {
 	const router = useRouter()
 	const searchParams = useSearchParams()
 	const {
@@ -27,11 +30,17 @@ const Register: React.FC = (): JSX.Element => {
 		handleChange,
 		handleBlur,
 		values,
+		isSubmitting,
 	}: FormikProps<TLoginForm> = useFormik<TLoginForm>({
 		initialValues: loginInitialValues,
 		validationSchema: loginValidationSchema,
-		onSubmit: (values) => {
-			handleLogin(values)
+		onSubmit: async (values) => {
+			try {
+				await handleLogin(values)
+				router.replace('/?login=success')
+			} catch (err: any) {
+				runToast(err.message, 'error')
+			}
 		},
 	})
 
@@ -39,6 +48,31 @@ const Register: React.FC = (): JSX.Element => {
 		searchParams.get('success') === 'true' &&
 			runToast('User registered successfully', 'success')
 	}, [searchParams])
+
+	const authControls: TAuthTextControlProps[] = [
+		{
+			error: errors.email,
+			touched: touched.email,
+			id: 'email',
+			label: 'Email address',
+			name: 'email',
+			onBlur: handleBlur,
+			onChange: handleChange,
+			type: 'email',
+			value: values.email,
+		},
+		{
+			error: errors.password,
+			touched: touched.password,
+			id: 'password',
+			label: 'Password',
+			name: 'password',
+			onBlur: handleBlur,
+			onChange: handleChange,
+			type: 'password',
+			value: values.password,
+		},
+	]
 
 	return (
 		<main className='flex flex-col justify-center items-center'>
@@ -51,45 +85,14 @@ const Register: React.FC = (): JSX.Element => {
 				onSubmit={handleSubmit}
 				noValidate
 			>
-				<AuthTextControl
-					error={errors.email}
-					touched={touched.email}
-					id='email'
-					label='Email address'
-					name='email'
-					onBlur={handleBlur}
-					onChange={handleChange}
-					type='email'
-					value={values.email}
-				/>
+				{authControls.map((ac) => (
+					<AuthTextControl key={ac.id} {...ac} />
+				))}
 
-				<AuthTextControl
-					error={errors.password}
-					touched={touched.password}
-					id='password'
-					label='Password'
-					name='password'
-					onBlur={handleBlur}
-					onChange={handleChange}
-					type='password'
-					value={values.password}
-				/>
-
-				<div className='my-2' />
-
-				<div className='flex flex-col justify-center items-center gap-3'>
-					<ControlButton
-						className='w-40 text-xl'
-						variant='success'
-						type='submit'
-					>
-						Login
-					</ControlButton>
-					<AuthFormFooter variant='login' />
-				</div>
+				<AuthFooter isSubmitting={isSubmitting} variant={variant} />
 			</form>
 		</main>
 	)
 }
 
-export default Register
+export default Login

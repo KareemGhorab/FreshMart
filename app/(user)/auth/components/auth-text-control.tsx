@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import styles from './auth.module.scss'
 
-type TProps = {
+export type TAuthTextControlProps = {
 	label: string
 	error?: string
 	touched?: boolean
@@ -13,7 +13,7 @@ type TProps = {
 	id: string
 }
 
-const AuthTextControl: React.FC<TProps> = ({
+const AuthTextControl: React.FC<TAuthTextControlProps> = ({
 	error,
 	label,
 	onBlur,

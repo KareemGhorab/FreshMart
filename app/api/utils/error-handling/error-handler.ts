@@ -1,4 +1,3 @@
-import logger from '@/utils/logger/logger'
 import { NextRequest, NextResponse } from 'next/server'
 
 export const checkAsyncFunction = async (
@@ -8,7 +7,6 @@ export const checkAsyncFunction = async (
 	try {
 		return await func(request)
 	} catch (err: any) {
-		logger.error(err)
 		return NextResponse.json(
 			{ message: err.message },
 			{ status: err.status || 400 }
