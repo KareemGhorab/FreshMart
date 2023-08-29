@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { TCurrency } from '@/types/app/locale/locale'
+import { TCurrency } from '@/types/locale'
 import { playfair_display } from '@/components/fonts'
 
 import styles from './price.module.scss'

@@ -1,4 +1,5 @@
-import type { NextAuthOptions } from 'next-auth'
+import type { NextAuthOptions, Session } from 'next-auth'
+import { JWT } from 'next-auth/jwt'
 import { object, string } from 'yup'
 import bcrypt from 'bcrypt'
 import CredentialsProvider from 'next-auth/providers/credentials'
@@ -6,6 +7,20 @@ import GoogleProvider from 'next-auth/providers/google'
 
 import { prisma } from '@/prisma/db'
 import { PrismaAdapter } from '@next-auth/prisma-adapter'
+import { Role } from '@prisma/client'
+
+interface IUser {
+	id: string
+	name: string
+	email: string
+	emailVerified: Date | null
+	role: Role
+	cartId: number | null
+}
+
+interface ISession extends Session {
+	user: IUser
+}
 
 export const authOptions: NextAuthOptions = {
 	providers: [
@@ -28,8 +43,9 @@ export const authOptions: NextAuthOptions = {
 					email: string().required().email(),
 					password: string().required(),
 				})
-				const { email, password } = schema.validateSync(credentials)
-
+				const { email: caseSensitiveEmail, password } =
+					schema.validateSync(credentials)
+				const email = caseSensitiveEmail.toLowerCase()
 				// Check for email existence
 				const user = await prisma.user.findUnique({
 					where: {

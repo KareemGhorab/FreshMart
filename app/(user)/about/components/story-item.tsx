@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { TPropsWithClassName } from '@/types/app/props/props'
+import { TPropsWithClassName } from '@/types/props'
 
 export type TStoryItem = {
 	icon: IconDefinition

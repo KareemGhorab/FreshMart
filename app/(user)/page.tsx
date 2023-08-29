@@ -3,7 +3,7 @@ import Hero from '@/components/home/hero/hero'
 import AboutSection from '@/components/home/about-section/about-section'
 import CategoriesSection from '@/components/home/categories-section/categories-section'
 
-const Home = () => (
+const Home: React.FC = async (): Promise<JSX.Element> => (
 	<main>
 		<Hero />
 		<Arrivals />
@@ -11,5 +11,4 @@ const Home = () => (
 		<CategoriesSection />
 	</main>
 )
-
 export default Home

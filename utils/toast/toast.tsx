@@ -38,4 +38,6 @@ export const runToast = (
 	}
 }
 
-export const Toast: React.FC = (): JSX.Element => <ToastContainer />
+export const Toast: React.FC = (): JSX.Element => (
+	<ToastContainer {...options} />
+)

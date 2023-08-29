@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { TPropsWithClassName } from '@/types/app/props/props'
+import { TPropsWithClassName } from '@/types/props'
 
 type TProps = TPropsWithClassName
 

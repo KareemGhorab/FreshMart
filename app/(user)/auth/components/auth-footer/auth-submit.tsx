@@ -1,7 +1,6 @@
 import ControlButton from '@/components/controls/control-button'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { TPropsWithAuthVariant } from '../../types/auth-variant'
+import LoadingSpinner from '@/components/ui/loading-spinner/loading-spinner'
 
 type TProps = { isSubmitting: boolean } & TPropsWithAuthVariant
 
@@ -15,7 +14,7 @@ const AuthSubmit: React.FC<TProps> = ({
 		type='submit'
 	>
 		{isSubmitting ? (
-			<FontAwesomeIcon icon={faSpinner} size='lg' />
+			<LoadingSpinner size='lg' />
 		) : (
 			<span>
 				{variant === 'login' ? 'Login' : null}
