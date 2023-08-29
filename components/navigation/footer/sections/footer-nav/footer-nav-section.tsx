@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import Link from 'next/link'
-import { TLink, TPropsWithClassName } from '@/types/app/props/props'
+import { TLink, TPropsWithClassName } from '@/types/props'
 
 export type TFooterNavSection = {
 	title: string

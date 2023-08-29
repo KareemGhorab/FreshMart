@@ -37,7 +37,7 @@ const Login: React.FC = (): JSX.Element => {
 		onSubmit: async (values) => {
 			try {
 				await handleLogin(values)
-				router.replace('/?login=success')
+				router.replace('/')
 			} catch (err: any) {
 				runToast(err.message, 'error')
 			}

@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import Image, { ImageProps } from 'next/image'
 import Link, { LinkProps } from 'next/link'
-import { TPropsWithClassName } from '@/types/app/props/props'
+import { TPropsWithClassName } from '@/types/props'
 
 export type TCategoryItem = {
 	image: ImageProps

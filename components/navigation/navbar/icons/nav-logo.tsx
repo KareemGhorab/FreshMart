@@ -8,8 +8,8 @@ const NavLogo: React.FC = (): JSX.Element => (
 				className='w-full'
 				src='/logo.png'
 				alt='FreshMart Logo'
-				width='176'
-				height='100'
+				width={176}
+				height={100}
 			></Image>
 		</Link>
 	</h1>
