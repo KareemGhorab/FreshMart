@@ -1,4 +1,3 @@
-import { TPropsWithUser } from '@/types/user'
 import NavMenu from './menu/nav-menu'
 import NavLogo from './icons/nav-logo'
 import NavProfile from './profile/nav-profile'
