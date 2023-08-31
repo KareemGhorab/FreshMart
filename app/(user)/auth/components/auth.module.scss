@@ -1,0 +1,15 @@
+.fieldset {
+	@apply flex flex-col gap-1;
+
+	small {
+		@apply text-red-500 text-sm;
+	}
+
+	label.invalid {
+		@apply text-red-500;
+	}
+
+	input.invalid {
+		@apply border-red-500;
+	}
+}

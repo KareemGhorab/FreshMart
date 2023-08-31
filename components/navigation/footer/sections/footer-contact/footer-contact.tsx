@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { TPropsWithClassName } from '@/types/app/props/props'
+import { TPropsWithClassName } from '@/types/props'
 import { faEnvelope, faHouse, faPhone } from '@fortawesome/free-solid-svg-icons'
 import FooterContactItem, { TFooterContactItem } from './footer-contact-item'
 
