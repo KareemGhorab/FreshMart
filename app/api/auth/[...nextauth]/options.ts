@@ -1,5 +1,4 @@
 import type { NextAuthOptions, Session } from 'next-auth'
-import { JWT } from 'next-auth/jwt'
 import { object, string } from 'yup'
 import bcrypt from 'bcrypt'
 import CredentialsProvider from 'next-auth/providers/credentials'
@@ -7,20 +6,6 @@ import GoogleProvider from 'next-auth/providers/google'
 
 import { prisma } from '@/prisma/db'
 import { PrismaAdapter } from '@next-auth/prisma-adapter'
-import { Role } from '@prisma/client'
-
-interface IUser {
-	id: string
-	name: string
-	email: string
-	emailVerified: Date | null
-	role: Role
-	cartId: number | null
-}
-
-interface ISession extends Session {
-	user: IUser
-}
 
 export const authOptions: NextAuthOptions = {
 	providers: [
@@ -68,11 +53,20 @@ export const authOptions: NextAuthOptions = {
 			},
 		}),
 	],
-	secret: process.env.SECRET,
 	session: {
 		strategy: 'jwt',
 		maxAge: 60 * 60 * 24 * 30,
 	},
 	adapter: PrismaAdapter(prisma),
 	debug: process.env.NODE_ENV === 'development',
+	callbacks: {
+		async jwt({ token, user }) {
+			if (user?.role) token.role = user.role
+			return token
+		},
+		async session({ session, token }) {
+			if (session?.user) session.user.role = token.role
+			return session
+		},
+	},
 }
