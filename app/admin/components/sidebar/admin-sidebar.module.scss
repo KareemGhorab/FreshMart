@@ -1,0 +1,3 @@
+.check_toggler:checked + * {
+	@apply -translate-x-sidebar;
+}
