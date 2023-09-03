@@ -2,14 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-input {
-	@apply border-2 border-app-200 px-4 py-2 outline-none rounded;
+input,
+textarea {
+	@apply border-2 border-app-200 px-4 py-2 outline-none rounded w-full;
 }
 
-input::placeholder {
+:is(input, textarea)::placeholder {
 	@apply text-app-200;
 }
 
-input:focus {
+:is(input, textarea)input:focus {
 	@apply border-app-400;
 }
