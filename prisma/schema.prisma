@@ -57,20 +57,20 @@ model VerificationToken {
 }
 
 model Cart {
-  id              Int               @id
+  id              Int               @id @default(autoincrement())
   user            User?             @relation(fields: [userId], references: [id])
   userId          String?           @map("user_id")
   ProductsOnCarts ProductsOnCarts[]
 }
 
 model Product {
-  id              Int               @id
+  id              Int               @id @default(autoincrement())
   name            String
   description     String?
   price           Float
   discount        Float?
   reviews         Review[]
-  totalReview     Int               @map("total_review")
+  totalReview     Int?               @map("total_review")
   ProductsOnCarts ProductsOnCarts[]
 }
 
@@ -86,7 +86,7 @@ model ProductsOnCarts {
 }
 
 model Review {
-  id        Int     @id
+  id        Int     @id @default(autoincrement())
   user      User    @relation(fields: [userId], references: [id])
   userId    String  @map("user_id")
   product   Product @relation(fields: [productId], references: [id])
