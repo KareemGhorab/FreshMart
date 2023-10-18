@@ -17,7 +17,7 @@ const initialValues: TForm = {
 	name: '',
 	price: '',
 	discount: '',
-	description: ''
+	description: '',
 }
 
 const schema = object({
@@ -27,16 +27,28 @@ const schema = object({
 	discount: number(),
 })
 
-const addProduct = async (data: TForm) => {
-	// TODO prisma insert
+const addProduct = async ({
+	name,
+	price,
+	description,
+	discount = '0',
+}: TForm) => {
+	prisma.product.create({
+		data: {
+			name,
+			price: +price,
+			description,
+			discount: +discount,
+		},
+	})
 }
 
 type TProps = TPropsWithClassName
 
 const NewProduct: React.FC<TProps> = ({ className }): JSX.Element => {
-	const {handleSubmit, handleChange, errors, dirty } = useFormik<TForm>({
+	const { handleSubmit, handleChange, errors, dirty } = useFormik<TForm>({
 		onSubmit: addProduct,
-		initialValues: initialValues
+		initialValues: initialValues,
 	})
 	return (
 		<form className={clsx('flex flex-col gap-3', className)}>
